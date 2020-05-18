@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1075636240835",
+    "firebase_url": "https://annadaata-26870.firebaseio.com",
+    "project_id": "annadaata-26870",
+    "storage_bucket": "annadaata-26870.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075636240835:android:3aabfab6134af78e993d76",
+        "android_client_info": {
+          "package_name": "com.rachit2525.annadaata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075636240835-m9sebtn4gcoio9hsm3k5ftk0c774984t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rachit2525.annadaata",
+            "certificate_hash": "e139d65704cae80c338c8c0f8913a3bf76fee992"
+          }
+        },
+        {
+          "client_id": "1075636240835-cvsul8kttii9ni3do2vpqpsdt0s428u5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXFaT7daqvXunJpzUQvWsjE7dm1ZX3YeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075636240835-cvsul8kttii9ni3do2vpqpsdt0s428u5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
