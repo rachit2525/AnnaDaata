@@ -1,0 +1,7 @@
+commented from the activity_main.xml file in properties of fbuttons // thus using regular buttons
+
+<!--            app:buttonColor="@color/btnSignActive"-->
+<!--            app:shadowColor="@android:color/black"-->
+<!--            app:shadowEnabled="true"-->
+<!--            app:shadowHeight="5dp"-->
+<!--            app:cornerRadius="4dp"-->
