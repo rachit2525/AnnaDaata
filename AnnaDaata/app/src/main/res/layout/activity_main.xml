@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,61 +7,6 @@
     android:background="@drawable/backgrd_img"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:src="@drawable/logo"
-            android:layout_width="300dp"
-            android:layout_height="150dp"></ImageView>
-
-        <TextView
-            android:gravity="center"
-            android:id="@+id/txtSlogan"
-            android:text="@string/slogan"
-            android:textColor="@android:color/white"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"></TextView>
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btnSignUp"
-            android:text="Sign Up"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/btnSignUp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-
-
-            />
-
-        <Button
-            android:id="@+id/btnSignIn"
-            android:text="Sign In"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/btnSignActive"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-
-
-            />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
