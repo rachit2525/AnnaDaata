@@ -7,4 +7,5 @@
     <color name="btnSignUp">#39796b</color>
     <color name="btnSignActive">#A9d440</color>
     <color name="overlay_color">#55333639</color>
+    <color name="border_color">#AA333639</color>
 </resources>

@@ -12,17 +12,25 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.rachit2525.annadaata.Callback.IRecyclerClickListener;
 import com.rachit2525.annadaata.Common.Common;
+import com.rachit2525.annadaata.EventBus.CategoryClick;
 import com.rachit2525.annadaata.Model.CategoryModel;
 import com.rachit2525.annadaata.R;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+
+
 public class MyCategoriesAdapter extends RecyclerView.Adapter<MyCategoriesAdapter.MyViewHolder> {
+
 
     Context context;
     List<CategoryModel> categoryModelList;
@@ -44,6 +52,13 @@ public class MyCategoriesAdapter extends RecyclerView.Adapter<MyCategoriesAdapte
         Glide.with(context).load(categoryModelList.get(position).getImage())
                 .into(holder.category_image);
         holder.category_name.setText(new StringBuilder(categoryModelList.get(position).getName()));
+        //event
+        holder.setListener((view, pos) -> {
+            Common.categorySelected=categoryModelList.get(pos);
+            EventBus.getDefault().postSticky(new CategoryClick(true,categoryModelList.get(pos)));
+
+
+        });
     }
 
     @Override
@@ -60,10 +75,32 @@ public class MyCategoriesAdapter extends RecyclerView.Adapter<MyCategoriesAdapte
         @BindView(R.id.txt_category)
         TextView category_name;
 
+        IRecyclerClickListener listener;
+
+        public void setListener(IRecyclerClickListener listener)
+        {
+            this.listener=listener;
+        }
+
+
+
+
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             unbinder= ButterKnife.bind(this,itemView);
+            itemView.setOnClickListener(this::onClick);
+
+
         }
+
+        public void onClick(View view)
+        {
+         listener.onItemClickListener(view,getAdapterPosition());
+        }
+
+
+
     }
 
     @Override
