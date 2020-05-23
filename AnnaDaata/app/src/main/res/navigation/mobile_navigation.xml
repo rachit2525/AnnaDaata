@@ -33,7 +33,16 @@
         android:id="@+id/nav_menu"
         android:name="com.rachit2525.annadaata.ui.menu.MenuFragment"
         android:label="@string/menu_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_food_list"
+        android:name="com.rachit2525.annadaata.ui.foodlist.FoodListFragment"
+        android:label="@string/menu_food_list"
+        tools:layout="@layout/fragment_food_list" />
+
 
     <fragment
         android:id="@+id/nav_slideshow"

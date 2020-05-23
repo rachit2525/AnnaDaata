@@ -34,4 +34,12 @@ public class CategoryModel {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<FoodModel> getFoods() {
+        return foods;
+    }
+
+    public void setFoods(List<FoodModel> foods) {
+        this.foods = foods;
+    }
 }
