@@ -12,14 +12,8 @@
             android:id="@+id/nav_menu"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_menu" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
 
-        <item
-            android:id="@+id/nav_food_list"
-            android:icon="@drawable/fui_ic_anonymous_white_24dp"
-            android:title="@string/menu_food_list" />
+
+
     </group>
 </menu>

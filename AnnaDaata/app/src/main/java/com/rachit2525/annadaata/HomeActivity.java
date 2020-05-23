@@ -10,6 +10,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.rachit2525.annadaata.EventBus.CategoryClick;
+import com.rachit2525.annadaata.EventBus.FoodItemClick;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
@@ -49,7 +50,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_menu, R.id.nav_slideshow, R.id.nav_food_list)
+                R.id.nav_home, R.id.nav_menu, R.id.nav_food_detail, R.id.nav_food_list)
                 .setDrawerLayout(drawer)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -108,6 +109,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if(event.isSuccess()) {
             //Toast.makeText(this, "Click to "+event.getCategoryModel().getName(), Toast.LENGTH_SHORT).show();
             navController.navigate(R.id.nav_food_list);
+        }
+    }
+
+    @Subscribe(sticky = true,threadMode = ThreadMode.MAIN)
+    public void onFoodItemClick(FoodItemClick event) {
+        if(event.isSuccess()) {
+            //Toast.makeText(this, "Click to "+event.getCategoryModel().getName(), Toast.LENGTH_SHORT).show();
+            navController.navigate(R.id.nav_food_detail);
         }
     }
 }
