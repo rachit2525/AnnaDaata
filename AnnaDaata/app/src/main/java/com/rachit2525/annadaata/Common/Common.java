@@ -15,4 +15,5 @@ public class Common {
     public static UserModel currentUser;
     public static CategoryModel categorySelected;
     public static FoodModel selectedFood;
+    //public static FoodModel SelectedFood;
 }

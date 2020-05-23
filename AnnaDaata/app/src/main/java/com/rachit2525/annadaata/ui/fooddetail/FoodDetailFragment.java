@@ -35,6 +35,7 @@ import com.rachit2525.annadaata.Common.Common;
 import com.rachit2525.annadaata.Model.CommentModel;
 import com.rachit2525.annadaata.Model.FoodModel;
 import com.rachit2525.annadaata.R;
+import com.rachit2525.annadaata.ui.comments.CommentFragment;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -75,6 +76,12 @@ public class FoodDetailFragment extends Fragment {
    void onRatingButtonClick()
    {
        showDialogRating();
+   }
+   @OnClick(R.id.btnShowComment)
+   void onShowCommentButtonClick()
+   {
+       CommentFragment commentFragment=CommentFragment.getInstance();
+       commentFragment.show(getActivity().getSupportFragmentManager(),"CommentFragment");
    }
 
     private void showDialogRating() {
