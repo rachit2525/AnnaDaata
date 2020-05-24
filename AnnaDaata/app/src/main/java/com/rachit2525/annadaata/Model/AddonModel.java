@@ -3,7 +3,7 @@ package com.rachit2525.annadaata.Model;
 public class AddonModel {
 
     private String name;
-    private Long prices;
+    private Long price;
 
     public AddonModel() {
     }
@@ -16,11 +16,11 @@ public class AddonModel {
         this.name = name;
     }
 
-    public Long getPrices() {
-        return prices;
+    public Long getPrice() {
+        return price;
     }
 
-    public void setPrices(Long prices) {
-        this.prices = prices;
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }
