@@ -2,15 +2,16 @@ package com.rachit2525.annadaata.Database;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 
 
-@Entity(tableName = "Cart")
+@Entity(tableName = "Cart",primaryKeys = {"uid","foodId","foodAddon","foodSize"})
 public class CartItem {
-    @PrimaryKey
+
     @NonNull
     @ColumnInfo(name = "foodId")
     private String foodId;
@@ -32,13 +33,14 @@ public class CartItem {
 
     @ColumnInfo(name = "foodExtraPrice")
     private  Double foodExtraPrice;
-
+    @NonNull
     @ColumnInfo(name = "foodAddon")
     private  String foodAddon;
 
+    @NonNull
     @ColumnInfo(name = "foodSize")
     private  String foodSize;
-
+    @NonNull
     @ColumnInfo(name = "uid")
     private  String uid;
 
@@ -122,4 +124,16 @@ public class CartItem {
         this.uid = uid;
     }
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if(obj==this)
+            return true;
+        if(!(obj instanceof CartItem))
+            return false;
+        CartItem cartItem=(CartItem)obj;
+        return cartItem.getFoodId().equals(this.foodId) && cartItem.getFoodAddon().equals(this.foodAddon) &&cartItem.getFoodSize().equals(this.foodSize);
+
+
+        //return super.equals(obj);
+    }
 }
