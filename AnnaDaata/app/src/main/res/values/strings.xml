@@ -13,7 +13,9 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_food_detail">Food Detail</string>
     <string name="menu_tools">Tools</string>
-    <string name="menu_share">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_send">Send</string>
     <string name="menu_food_list">Food List</string>
 
     <string name="home_second">Home Second</string>

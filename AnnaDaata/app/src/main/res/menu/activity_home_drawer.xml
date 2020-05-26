@@ -12,8 +12,29 @@
             android:id="@+id/nav_menu"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_menu" />
-
-
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
 
     </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_cart"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_cart" />
+
+
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_food_list" />
+
+
+
+
+        </menu>
+    </item>
 </menu>
